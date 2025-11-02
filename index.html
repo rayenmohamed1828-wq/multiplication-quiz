@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Quiz</title>
+</head>
+<body>
+    <header>
+        <h1>Tableau de Multiplication pour les enfants entre 6-11 ans</h1>
+    </header>
+    
+    <main>
+        <div class="top-section" id="quiz-container">
+            <div class="progress">
+                Question <span id="current">1</span>/10 | Score: <span id="score">0</span>
+            </div>
+            <div class="equation">
+                <span id="num1">6</span>
+                ×
+                <span id="num2">7</span>
+                = ?
+            </div>
+        </div>
+
+        <div class="bottom-section">
+            <div class="result" id="result"></div>
+            <div class="final-score hidden" id="final">
+                <h2>🎉 Quiz Terminé! 🎉</h2>
+                <p>Score: <span id="final-score">0</span>/10</p>
+                <button class="restart-btn" onclick="recommencer()">Recommencer</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="cards">
+        <input type="radio" name="answer" id="a1" hidden onclick="verifier(0)">
+        <label for="a1" id="c1">42</label>
+        
+        <input type="radio" name="answer" id="a2" hidden onclick="verifier(1)">
+        <label for="a2" id="c2">49</label>
+        
+        <input type="radio" name="answer" id="a3" hidden onclick="verifier(2)">
+        <label for="a3" id="c3">56</label>
+    </div>
+
+</body>
+</html>
